@@ -22,7 +22,7 @@ describe('API de tareas', () => {
 
   test('POST /tareas sin título devuelve 400', async () => {
     const res = await request(app).post('/tareas').send({});
-    expect(res.statusCode).toBe(500);
+    expect(res.statusCode).toBe(400);
   });
 
   test('GET /tareas/999 devuelve 404', async () => {
